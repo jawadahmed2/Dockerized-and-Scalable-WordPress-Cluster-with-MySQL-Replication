@@ -1,4 +1,4 @@
-Docker MySQL master-slave replication 
+Dockerized and Scalable Wordpress Cluster With MySQL Replication
 ========================
 
 MySQL 8.0 master-slave replication with using Docker. 
