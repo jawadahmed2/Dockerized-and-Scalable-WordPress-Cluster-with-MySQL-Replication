@@ -3,8 +3,6 @@ Dockerized and Scalable Wordpress Cluster With MySQL Replication
 
 MySQL 8.0 master-slave replication with using Docker. 
 
-Previous version based on MySQL 5.7 is available in [mysql5.7](https://github.com/vbabak/docker-mysql-master-slave/tree/mysql5.7) branch.
-
 ## Run
 
 To run this examples you will need to start containers with "docker-compose" 
@@ -76,3 +74,26 @@ docker exec -it mysql_master bash
 ```bash
 docker exec -it mysql_slave bash
 ```
+### Restart the container if there is issue
+
+```bash
+docker-compose restart
+```
+
+### Access The Wordpress Site
+- Go to the browser and enter the just
+- ``` localhost ```
+- The ingnix server will redirect the default localhost 80 to the wordpress 1 site
+
+### Down the Wordpress1 container
+- Now for testing, down the wordpress1 container using below command, in this way the wordpress2 will activate and the data is synchronised.
+- ```bash
+  docker stop wordpress1
+  ```
+- Now again run the localhost
+- And check out the logs so it will show the wordpress2 will be activated
+- ```bash
+  docker logs wordpress2
+  ```
+
+### ------------------------------------------------------
